@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <title>Outis Company</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* 1. Umumiy sozlamalar */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0f0f0f; /* To'q rangli fon */
+            color: white;
+            overflow-x: hidden; /* O'ngdan uchib kirganda polosa chiqmasligi uchun */
+        }
+
+        /* 2. Animatsiya: O'ngdan chapga uchib kirish */
+        @keyframes slideIn {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .animated {
+            animation: slideIn 0.8s ease-out forwards;
+        }
+
+        /* 3. Header va Ijtimoiy tarmoqlar */
+        .header {
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(36, 12, 59, 0.178);
+        }
+
+        .company-name {
+            font-size: 32px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            color: #030418;
+            text-transform: uppercase;
+        }
+
+        .social-group {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-btn {
+            text-decoration: none;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 30px; /* Yumaloq chetlar */
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: 0.3s;
+        }
+
+        /* Ranglar */
+        .tg { background-color: #0088cc; } /* Ko'k */
+        .inst { background-color: #e1306c; } /* Pushti */
+        .yt { background-color: #ff0000; } /* Qizil */
+
+        .social-btn:hover {
+            transform: translateY(-5px);
+            filter: brightness(1.2);
+        }
+
+        /* 4. Asosiy qism: Sidebar va Files */
+        .main-layout {
+            display: flex;
+            padding: 30px;
+        }
+
+        .sidebar {
+            width: 250px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .file-btn {
+            background: #1e1e1e;
+            color: white;
+            border: 2px solid #333;
+            padding: 15px;
+            border-radius: 15px; /* Yumaloq */
+            font-weight: bold;
+            text-align: left;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .file-btn:hover {
+            border-color: #00d4ff;
+            background: #252525;
+        }
+
+        .file-btn i {
+            margin-right: 10px;
+            color: #00d4ff;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header animated">
+        <div class="company-name">Outis Company</div>
+        
+        <div class="social-group">
+            <a href="#" class="social-btn tg"><i class="fab fa-telegram"></i> Telegram</a>
+            <a href="#" class="social-btn inst"><i class="fab fa-instagram"></i> Instagram</a>
+            <a href="#" class="social-btn yt"><i class="fab fa-youtube"></i> YouTube</a>
+        </div>
+    </header>
+
+    <div class="main-layout">
+        <div class="sidebar animated" style="animation-delay: 0.2s;">
+            <div class="file-btn"><i class="fas fa-file-code"></i> File 1</div>
+            <div class="file-btn"><i class="fas fa-file-code"></i> File 2</div>
+            <div class="file-btn"><i class="fas fa-file-code"></i> File 3</div>
+            <div class="file-btn"><i class="fas fa-file-code"></i> File 4</div>
+            <div class="file-btn"><i class="fas fa-file-code"></i> File 5</div>
+        </div>
+
+        <div class="content animated" style="animation-delay: 0.4s; padding-left: 50px;">
+            <h2>OUTIS COMPANY</h2>
+            <p>welcome the future awaits you.</p>
+        </div>
+    </div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <title>Outis Company - Files</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* 1. Asosiy dizayn */
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #0b0e14;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        /* 2. Animatsiya (O'ngdan chapga) */
+        @keyframes slideIn {
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        .animated { animation: slideIn 0.7s ease-out forwards; }
+
+        /* 3. Header */
+        .header {
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.03);
+            border-bottom: 1px solid #1a1a1a;
+        }
+        .company-name { font-size: 28px; font-weight: 900; color: #00d4ff; text-transform: uppercase; }
+
+        .social-group { display: flex; gap: 12px; }
+        .social-btn {
+            text-decoration: none; color: white; padding: 10px 18px;
+            border-radius: 25px; font-weight: bold; display: flex; align-items: center; gap: 8px;
+            transition: 0.3s; font-size: 14px;
+        }
+        .tg { background: #0088cc; }
+        .inst { background: #e1306c; }
+        .yt { background: #ff0000; }
+        .social-btn:hover { transform: scale(1.05); filter: brightness(1.1); }
+
+        /* 4. Sidebar Files */
+        .main-layout { display: flex; padding: 40px; }
+        .sidebar { width: 220px; display: flex; flex-direction: column; gap: 12px; }
+
+        .file-btn {
+            background: #161b22; color: #c9d1d9; border: 1px solid #30363d;
+            padding: 14px; border-radius: 12px; font-weight: 600;
+            cursor: pointer; transition: 0.3s; display: flex; align-items: center; gap: 10px;
+        }
+        .file-btn:hover { border-color: #00d4ff; background: #21262d; color: white; }
+
+        /* 5. MODAL OYNA (Alohida ochiladigan oyna) */
+        .modal-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.8); display: none; /* Dastlab yashirilgan */
+            justify-content: center; align-items: center; z-index: 1000;
+        }
+        .modal-box {
+            background: #161b22; padding: 30px; border-radius: 20px;
+            width: 400px; border: 2px solid #00d4ff; text-align: center;
+            box-shadow: 0 0 30px rgba(0, 212, 255, 0.2);
+            animation: popUp 0.3s ease-out;
+        }
+        @keyframes popUp { from { transform: scale(0.8); } to { transform: scale(1); } }
+
+        .close-btn {
+            margin-top: 20px; background: #ff0000; color: white;
+            border: none; padding: 8px 20px; border-radius: 10px; cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header animated">
+        <div class="company-name">Outis Company</div>
+        <div class="social-group">
+            <a href="#" class="social-btn tg"><i class="fab fa-telegram"></i> Telegram</a>
+            <a href="#" class="social-btn inst"><i class="fab fa-instagram"></i> Instagram</a>
+            <a href="#" class="social-btn yt"><i class="fab fa-youtube"></i> YouTube</a>
+        </div>
+    </header>
+
+    <div class="main-layout">
+        <div class="sidebar animated" style="animation-delay: 0.2s;">
+            <div class="file-btn" onclick="openFile(1)"><i class="fas fa-file-alt"></i> File 1</div>
+            <div class="file-btn" onclick="openFile(2)"><i class="fas fa-file-alt"></i> File 2</div>
+            <div class="file-btn" onclick="openFile(3)"><i class="fas fa-file-alt"></i> File 3</div>
+            <div class="file-btn" onclick="openFile(4)"><i class="fas fa-file-alt"></i> File 4</div>
+            <div class="file-btn" onclick="openFile(5)"><i class="fas fa-file-alt"></i> File 5</div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-box">
+            <h2 id="modalTitle">File Nomi</h2>
+            <p id="modalBody">Bu fayl ichidagi ma'lumotlar bu yerda ko'rinadi.</p>
+            <button class="close-btn" onclick="closeFile()">Yopish</button>
+        </div>
+    </div>
+
+    <script>
+        // Oynani ochish funksiyasi
+        function openFile(num) {
+            const overlay = document.getElementById('modalOverlay');
+            const title = document.getElementById('modalTitle');
+            const body = document.getElementById('modalBody');
+
+            overlay.style.display = 'flex';
+            title.innerText = "File " + num;
+            body.innerText = "Siz Outis Company ning " + num + "-sonli faylini ochdingiz. Bu yerda maxsus loyihalar turadi.";
+        }
+
+        // Oynani yopish funksiyasi
+        function closeFile() {
+            document.getElementById('modalOverlay').style.display = 'none';
+        }
+
+        // Oynadan tashqarini bossa ham yopilishi uchun
+        window.
+        <!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <title>Outis Company - Interactive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Asosiy dizayn */
+        body { margin: 0; font-family: 'Segoe UI', sans-serif; background-color: #0b0e14; color: white; overflow-x: hidden; }
+        
+        @keyframes slideIn { from { transform: translateX(100%); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+        .animated { animation: slideIn 0.7s ease-out forwards; }
+
+        .header { padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; background: rgba(255, 255, 255, 0.03); border-bottom: 1px solid #1a1a1a; }
+        .company-name { font-size: 28px; font-weight: 900; color: #00d4ff; text-transform: uppercase; }
+
+        .social-group { display: flex; gap: 12px; }
+        .social-btn { text-decoration: none; color: white; padding: 10px 18px; border-radius: 25px; font-weight: bold; display: flex; align-items: center; gap: 8px; transition: 0.3; font-size: 14px; }
+        .tg { background: #0088cc; } .inst { background: #e1306c; } .yt { background: #ff0000; }
+
+        /* Sidebar */
+        .main-layout { display: flex; padding: 40px; }
+        .sidebar { width: 220px; display: flex; flex-direction: column; gap: 12px; }
+        .file-btn { background: #161b22; color: #c9d1d9; border: 1px solid #30363d; padding: 14px; border-radius: 12px; font-weight: 600; cursor: pointer; transition: 0.3s; display: flex; align-items: center; gap: 10px; }
+        .file-btn:hover { border-color: #00d4ff; background: #21262d; color: white; transform: scale(1.02); }
+
+        /* MODAL OYNA (Sizga nima kerak?)
+        <!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <title>Outis Company</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        body {
+            margin: 0;
+            background-color: #0b0e14;
+            color: white;
+            font-family: sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* 1. O'ngdan chapga uchib kirish animatsiyasi */
+        @keyframes kirish {
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        .animatsiya { animation: kirish 0.8s ease-out forwards; }
+
+        /* 2. Tepada ijtimoiy tarmoqlar */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 40px;
+            background: #161b22;
+        }
+        .logo { font-size: 30px; font-weight: bold; color: #00d4ff; }
+
+        .tugmalar-guruhi { display: flex; gap: 15px; }
+        .ijtimoiy {
+            text-decoration: none; color: white; padding: 10px 20px;
+            border-radius: 25px; font-weight: bold; display: flex; align-items: center; gap: 10px;
+        }
+        .tg { background: #0088cc; }
+        .inst { background: #e1306c; }
+        .yt { background: #ff0000; }
+
+        /* 3. Chap tarafdagi File menyusi */
+        .asosiy { display: flex; padding: 40px; }
+        .sidebar { width: 250px; display: flex; flex-direction: column; gap: 15px; }
+        
+        .file-tugma {
+            background: #1c2128; color: white; border: 1px solid #30363d;
+            padding: 15px; border-radius: 15px; cursor: pointer;
+            font-size: 18px; font-weight: bold; text-align: left;
+        }
+        .file-tugma:hover { border-color: #00d4ff; }
+
+        /* 4. MODAL OYNA (Sizga nima kerak?) */
+        .oyna-fon {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.9); display: none; /* Yashirin */
+            justify-content: center; align-items: center; z-index: 1000;
+        }
+        .oyna-ichki {
+            background: #1c2128; padding: 40px; border-radius: 25px;
+            border: 2px solid #00d4ff; text-align: center; width: 350px;
+        }
+        .savol { font-size: 22px; margin-bottom: 20px; color: #00d4ff; font-weight: bold; }
+        
+        .variant {
+            display: block; width: 100%; padding: 10px; margin: 10px 0;
+            background: #00d4ff; color: black; border: none;
+            border-radius: 10px; font-weight: bold; cursor: pointer;
+        }
+        .yopish { color: red; cursor: pointer; margin-top: 15px; display: inline-block; }
+    </style>
+</head>
+<body>
+
+    <div class="header animatsiya">
+        <div class="logo">OUTIS COMPANY</div>
+        <div class="tugmalar-guruhi">
+            <a href="#" class="ijtimoiy tg"><i class="fab fa-telegram"></i> Telegram</a>
+            <a href="#" class="ijtimoiy inst"><i class="fab fa-instagram"></i> Instagram</a>
+            <a href="#" class="ijtimoiy yt"><i class="fab fa-youtube"></i> YouTube</a>
+        </div>
+    </div>
+
+    <div class="asosiy">
+        <div class="sidebar animatsiya" style="animation-delay: 0.2s;">
+            <button class="file-tugma" onclick="savolBer(1)">File 1</button>
+            <button class="file-tugma" onclick="savolBer(2)">File 2</button>
+            <button class="file-tugma" onclick="savolBer(3)">File 3</button>
+            <button class="file-tugma" onclick="savolBer(4)">File 4</button>
+            <button class="file-tugma" onclick="savolBer(5)">File 5</button>
+        </div>
+    </div>
+
+    <div class="oyna-fon" id="savolOynasi">
+        <div class="oyna-ichki">
+            <div class="savol">Sizga nima kerak?</div>
+            <button class="variant" onclick="javob('Rasm kerak')">Rasm</button>
+            <button class="variant" onclick="javob('Ma\'lumot kerak')">Ma'lumot</button>
+            <button class="variant" onclick="javob('Dastur kerak')">Dastur</button>
+            <div class="yopish" onclick="yop()">Yopish</div>
+        </div>
+    </div>
+
+    <script>
+        // Oynani ochish
+        function savolBer(faylRaqami) {
+            document.getElementById('savolOynasi').style.display = 'flex';
+        }
+
+        // Oynani yopish
+        function yop() {
+            document.getElementById('savolOynasi').style.display = 'none';
+        }
+
+        // Tanlov qilganda
+        function javob(matn) {
+            alert("Siz tanladingiz: " + matn);
