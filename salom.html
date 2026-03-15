@@ -1,0 +1,21 @@
+<form id="form">
+<input type="text" id="name" placeholder="Ismingiz">
+<textarea id="msg" placeholder="Fikringiz"></textarea>
+<button type="submit">Yuborish</button>
+</form>
+
+<script>
+document.getElementById("form").addEventListener("submit", function(e){
+e.preventDefault();
+
+let name = document.getElementById("name").value;
+let msg = document.getElementById("msg").value;
+
+let token = "8600725369:AAGVdHOEssa0kk2bUaF4tsN0uh-VxdsSVtA";
+let chat_id = "8600725369";
+
+let text = "Yangi fikr:\nIsm: " + name + "\nFikr: " + msg;
+
+fetch("https://api.telegram.org/bot"+token+"/sendMessage?chat_id="+chat_id+"&text="+encodeURIComponent(text));
+});
+</script>
